@@ -33,6 +33,7 @@ const ZDGUpdate = (ZDGsock) => {
       }
       if (connection === 'open'){
          console.log('© BOT-ZDG -CONECTADO')
+         console.log('Porta: ' + port)
       }
    })
 }
