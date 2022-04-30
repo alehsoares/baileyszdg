@@ -4,6 +4,7 @@ const { unlink, existsSync, mkdirSync, readFileSync } = require('fs')
 const P = require('pino')
 const ZDGPath = './ZDGSessions/'
 const ZDGAuth = 'auth_info.json'
+var contratacao = "";
 
 const ZDGLocation = {
    location: { 
@@ -117,10 +118,11 @@ const ZDGConnection = async () => {
          // mensagem de texto
          if (msg.message.conversation.toLowerCase() === 'botzdg') {
             console.log('Entrou no if')
-            //ZDGSendMessage(jid, { text: ZDGUsuario + ' entre agora para comunidade ZDG e tenha acesso a esse projeto completo e mais de 100 vídeo aulas sobre APIs de WhatsApp.' })
-            ZDGsock.sendMessage(jid, { text: ZDGUsuario + ' entre agora para comunidade ZDG e tenha acesso a esse projeto completo e mais de 100 vídeo aulas sobre APIs de WhatsApp.' })
+            ZDGSendMessage(jid, { text: ZDGUsuario + ' entre agora para comunidade ZDG e tenha acesso a esse projeto completo e mais de 100 vídeo aulas sobre APIs de WhatsApp.' })
                .then(result => console.log('RESULT: ', result))
                .catch(err => console.log('ERROR: ', err))
+            contratacao = 'Ale'
+            console.log('Teste: ' + contratacao)
          }
 
          // localização
@@ -128,6 +130,7 @@ const ZDGConnection = async () => {
             ZDGSendMessage(jid, ZDGLocation)
                .then(result => console.log('RESULT: ', result))
                .catch(err => console.log('ERROR: ', err))
+            console.log('Teste: ' + contratacao)
          }
 
          // link
