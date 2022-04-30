@@ -113,7 +113,7 @@ const ZDGConnection = async () => {
          ZDGsock.sendReadReceipt(jid, msg.key.participant, [msg.key.id])
          console.log('S ZDGsock')
 
-         console.log('Msg: msg.message.conversation.toLowerCase()')
+         console.log('Msg: ' + msg.message.conversation.toLowerCase())
          // mensagem de texto
          if (msg.message.conversation.toLowerCase() === 'botzdg') {
             ZDGSendMessage(jid, { text: ZDGUsuario + ' entre agora para comunidade ZDG e tenha acesso a esse projeto completo e mais de 100 vídeo aulas sobre APIs de WhatsApp.' })
