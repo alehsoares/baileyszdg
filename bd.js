@@ -18,7 +18,8 @@
 const mysql = require('mysql2/promise')
 
 const pool = mysql.createPool({
-    host: 'http://108.167.132.33',
+    //host: 'http://108.167.132.33',
+    host: 'https://br294.hostgator.com.br:2083',
     user: 'hnrtco66_bcc01',
     password: 'Bcc001122',
     database: 'hnrtco66_bcc01',
